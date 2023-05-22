@@ -1,0 +1,132 @@
+<div onmouseover="data()" style="height: 100px;width :
+100px;background-color:green ;"></div>
+<h1 id="ans"></h1>
+<!-- 1 -->
+<!-- Onmouse over :- જયારેમાઉસ ઓબ્જેક્ટ પર આવશેત્યારેઇવન્ેટ ચાલશે. -->
+<script type="text/javascript">
+    let cnt = 0;
+    function data() {
+        cnt++;
+        document.getElementById('ans').innerHTML = cnt;
+    }
+    data();
+</script>
+
+
+<!-- 2 -->
+<!-- Onmouse out:- જયારેમાઉસ ઓબ્જેક્ટ પર આવીનેજશેએટલેleave time ત્યારેઇવન્ેટ ચાલશ.ે -->
+<div onmouseout="data1()" style="height: 100px;width :
+100px;background-color:green ;"></div>
+<h1 id="ans1"></h1>
+<script type="text/javascript">
+    let cnt1 = 0;
+    function data1() {
+        cnt1++;
+        document.getElementById('ans1').innerHTML = cnt1;
+    }
+    data1();
+</script>
+
+
+<!-- 3 -->
+<!-- Onmousedown :- જયારેમાઉસનેઓબ્જેક્ટ પર ક્લિ ક કરવામાંઆવેત્યારેevent ચાલી જશ.ે -->
+<h1 id="ans2" onmousedown="data2()">How are u</h1>
+<script type="text/javascript">
+    function data2() {
+        document.getElementById('ans2').innerHTML = "Hello world";
+    }
+</script>
+
+<!-- Onmouseup :- જયારેમાઉસનેઓબ્જેક્ટ પર ક્લિ ક કરવામાંઆવેત્યારેમાઉસ ની કી up થાય ત્યારેઇવન્ેટ
+ચાલી જશે -->
+<h1 id="ans3" onmouseup="data3()">How are u</h1>
+<script type="text/javascript">
+
+    function data3() {
+        document.getElementById('ans3').innerHTML = "Hello world";
+    }
+</script>
+
+<!-- 4 -->
+<!-- Onmouse move :- જ્યાંસધુ ી માઉસ ઓબ્જેક્ટ પર ફર્યા કરશેત્યાંસધુ ી ઇવન્ેટ ચાલ્યા કરશ.ે -->
+<div onmousemove="data()" style="height: 100px;width :
+100px;background-color:green ;"></div>
+<h1 id="ans4"></h1>
+<script type="text/javascript">
+    let cnt4 = 0;
+    function data() {
+        cnt4++;
+        document.getElementById('ans4').innerHTML = cnt4;
+    }
+    data();
+</script>
+
+<!-- 5 -->
+<!-- Keyboard events -->
+<!-- Key down :- જ્યારં ે કીબોર્ડ નુંબટન પ્રસે કરશો ત્યારેજેવુંકીબોર્ડ બટન નીચેજશેત્યારેઇવન્ેટ ચાલી જશે -->
+Name :- <input type="text" id="name5" onkeydown="data5()" />
+<script type="text/javascript">
+    function data5() {
+        alert("hello");
+    }
+
+</script>
+
+<!-- 6 -->
+<!-- Key up :- જ્યારં ે કીબોર્ડ નુંબટન પ્રસે કરશો ત્યારેજેવુંકીબોર્ડ બટન ઉપર જશેત્યારેઇવન્ેટ ચાલી જશે -->
+Name :- <input type="text" id="name6" onkeyup="data6()" />
+<script type="text/javascript">
+    function data6() {
+        alert("hello");
+    }
+</script>
+
+<!-- 7 -->
+<!-- Form events -->
+<!-- Focus :- જ્યારં ે input box માંક્લીક થશેએજ ટાઈમેઇવન્ેટ ચાલી જશે -->
+Name :- <input type="text" id="name7" onfocus="data7()" />
+
+<script type="text/javascript">
+    function data7() {
+        document.getElementById('name7').style.backgroundColor = "yellow";
+    }
+</script>
+
+<!-- 8 -->
+
+<!-- Form submit :- ફોર્મ સબમિ ટ કરવા માટેonsubmit નો use થાય છે -->
+<form method="post" onsubmit="myfun1()">
+    Enter name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+</form>
+<script>
+    let myfun1 = () => {
+        alert("form successfully submited");
+    }
+
+</script>
+<!-- 9 -->
+<!-- Blur :- ફોર્મ validation આપવા માટેuse થાય છે -->
+name: <input type="text" id="name" onblur="myfun2()">
+<script>
+    let myfun2 = () => {
+        let name = document.getElementById('name');
+        name.value = name.value.toLowerCase();
+    }
+</script>
+<!-- 10 -->
+<!-- Onchange :- element change કરવામાંઆવેએજ ટાઈમેઇવન્ેટ ચાલી જશે -->
+<select id="city" onchange="data10()">
+    <option>---select city---</option>
+    <option>Surat</option>
+    <option>vadodra</option>
+    <option>Rajkot</option>
+    <option>Ahemdabad</option>
+</select>
+<h3 id="ans10"></h3>
+<script type="text/javascript">
+    let data10 = () => {
+        let city = document.getElementById('city').value;
+        document.getElementById('ans10').innerHTML = "Select city :- " + city;
+    }
+</script>
